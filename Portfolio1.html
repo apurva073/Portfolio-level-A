@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apurva's Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background: url('student-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: #4c98af;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            text-align: center;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            border-bottom: 2px solid #4c9baf;
+            padding-bottom: 10px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+        }
+
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        form input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        form button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background: #4c74af;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background: #45a0a0;
+        }
+
+        #projects .project {
+            display: inline-block;
+            width: 45%;
+            margin: 2.5%;
+        }
+
+        #projects .project img {
+            width: 100%;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #4c9baf;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #about, #projects, #contact, #work-experience, #education, #skills {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Apurva's Portfolio</h1>
+        <nav>
+            <ul id="nav">
+                <li><a onclick="showSection('about')">About Me</a></li>
+                <li><a onclick="showSection('work-experience')">Work Experience</a></li>
+                <li><a onclick="showSection('education')">Education</a></li>
+                <li><a onclick="showSection('skills')">Skills</a></li>
+                <li><a onclick="showSection('projects')">Projects</a></li>
+                <li><a onclick="showSection('contact')">Contact</a></li>
+                <li><a href="https://github.com/apurva073" target="_blank">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! I am Apurva, a visionary Software Tester and a passionate student. I'm a highly motivated Fresher in Software Testing with a strong foundation in developing and executing comprehensive test plans and test cases. Skilled in collaborating with developers to identify and resolve software issues, creating and maintaining automated test scripts, and reporting and tracking software defects. Aiming to leverage my skills and passion for software testing to contribute to a dynamic team and ensure the delivery of high-quality software products...</p>
+        </section>
+
+        <section id="work-experience">
+            <h2>Work Experience</h2>
+            <p>Intern at MoolyaEd Company, May 2024 - June 2024</p>
+            <ul>
+                <li>Did Manual testing of a web application.</li>
+                <li>Took traning class about Software Testing.</li>
+                <li>Learned and implemented new technologies.</li>
+            </ul>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <p>Bachelor of Computer Applications, Chaitanya deemed to be University, 2022 - Present</p>
+            <ul>
+                <li>GPA: 8.8/10.0</li>
+                <li>Relevant Coursework: Web Development</li>
+                <li>Activities:Events&Cultural Club President, NCC cadet</li>
+            </ul>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS, Java script</script></li>
+                <li>Java</li>
+                <li> GitHub</li>
+                <li>Team Collaboration, Problem Solving</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <img src="C:\Users\aksha\Downloads\Java oops.jpeg" alt="Project 1">
+                <h3>Java oops project</h3>
+                <p>Created a library management system
+                     using java oops concept...</p>
+            </div>
+        
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="organization">Organization:</label>
+                <input type="text" id="organization" name="organization">
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Apurva's Portfolio</p>
+        <p><a href= target="_blank">GitHub</a></p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('main section');
+            sections.forEach(section => section.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        // Initially show the About section
+        showSection('about');
+
+        // Contact Form Submission
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const organization = document.getElementById('organization').value;
+            
+            if (name && phone && email) {
+                alert(`Thank you, ${name}! Your details have been submitted.`);
+                // Additional form processing logic here
+            } else {
+                alert('Please fill out all required fields.');
+            }
+        });
+    </script>
+</body>
+</html>
